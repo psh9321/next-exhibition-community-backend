@@ -1,0 +1,30 @@
+
+name: next-project01-backend
+
+on: 
+  push: 
+    branches: ["master"]
+
+jobs: 
+  build:
+    runs-on: ubuntu-latest
+
+    steps: 
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version : 10.2.0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.18.3
+          cache : "pnpm"
+      
+      - name: Install dependencies
+        run: pnpm i
+
+      - name: Run Gulp build
+        run: pnpm gulp dev
