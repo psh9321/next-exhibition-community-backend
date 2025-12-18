@@ -1,4 +1,4 @@
-# 전시 + 緣 (전시와 사람 사이의 '인연') backend server ver 0.0.0.1
+# 전시커뮤니티 backend server ver 0.0.0.1
 
 ## 개발환경
 - Node.js@20.18.3
